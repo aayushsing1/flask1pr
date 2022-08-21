@@ -8,6 +8,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///todo.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+@app.route("/hello")
+def index():
+    return render_template("index.html")
 
 class Todo(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
