@@ -21,6 +21,12 @@ def hello_world():
     allTodo = Todo.query.all()
     return render_template('index.html', allTodo=allTodo)
 
+@app.route("/show")
+def products():
+    allTodo = Todo.query.all()
+    print(allTodo)
+    return 'this is product page'
+
 
 @app.route('/update/<int:sno>', methods=['GET', 'POST'])
 def update(sno):
@@ -53,4 +59,5 @@ class Todo(db.Model):
         return f"{self.sno} - {self.title}"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.debug= True
+    app.run()
