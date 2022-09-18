@@ -9,7 +9,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
-@app.route("/index", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def hello_world():
     if request.method=='POST':
         title = request.form['title']
@@ -59,5 +59,4 @@ class Todo(db.Model):
         return f"{self.sno} - {self.title}"
 
 if __name__ == "__main__":
-    app.debug= True
-    app.run()
+    app.run(debug=True)
