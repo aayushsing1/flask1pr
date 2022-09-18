@@ -22,12 +22,6 @@ def hello_world():
     return render_template('index.html', allTodo=allTodo)
 
 
-@app.route("/show")
-def products():
-    allTodo = Todo.query.all()
-    print(allTodo)
-    return 'this is product page'
-
 @app.route('/update/<int:sno>', methods=['GET', 'POST'])
 def update(sno):
     if request.method=='POST':
