@@ -59,4 +59,4 @@ class Todo(db.Model):
         return f"{self.sno} - {self.title}"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
