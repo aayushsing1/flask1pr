@@ -58,6 +58,6 @@ class Todo(db.Model):
     def __repr__(self) -> str:
         return f"{self.sno} - {self.title}"
 
-if __name__ == "__main__":
+if __name__ == "__app__":
     app.debug= True
     app.run()
