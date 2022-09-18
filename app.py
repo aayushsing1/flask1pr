@@ -9,7 +9,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route("/hii", methods=['GET', 'POST'])
 def hello_world():
     if request.method=='POST':
         title = request.form['title']
