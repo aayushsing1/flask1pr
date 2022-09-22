@@ -34,7 +34,7 @@ def hello_world():
 def products():
     allTodo = Todo.query.all()
     print(allTodo)
-    return 'this is product page'
+    return render_template('static.html')
 
 
 @app.route('/update/<int:sno>', methods=['GET', 'POST'])
